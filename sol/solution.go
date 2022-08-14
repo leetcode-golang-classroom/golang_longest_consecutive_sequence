@@ -11,6 +11,9 @@ func longestConsecutive(nums []int) int {
 			unique = append(unique, num)
 		}
 	}
+	if len(unique) == 1 {
+		return 1
+	}
 	// find
 	for _, num := range unique {
 		if _, ok := hash[num-1]; !ok { // num is smallest
